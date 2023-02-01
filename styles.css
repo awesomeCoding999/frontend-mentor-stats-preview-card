@@ -10,12 +10,115 @@
   --very-dark-blue: #090b1a;
   --dark-desaturated-blue: #1b1938;
   --soft-violet: #aa5cdb;
+  --transparent-violet: rgba(170, 92, 219, 0.518);
   --white: #ffffff;
   --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
   --slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
 }
 
-/*
-font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif;
-*/
+body {
+  background-color: var(--very-dark-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+}
+
+.card-container {
+  width: 327px;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.purple-overlay {
+  position: relative;
+  max-height: 100%;
+}
+
+.purple-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  background: var(--transparent-violet);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.header-img {
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.title,
+.description {
+  width: 264px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 32px;
+  margin: 2.5rem auto 1rem;
+}
+
+.insights-text {
+  color: var(--soft-violet);
+}
+
+.description {
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: 25px;
+  color: var(--white);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+.analytics-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  list-style-type: none;
+}
+
+.analytic {
+  margin-top: 1.2rem;
+}
+
+.stats {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 29px;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--soft-violet);
+  text-decoration: none;
+}
